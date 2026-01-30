@@ -63,6 +63,17 @@ namespace COMP003A.Assignment3
             Console.WriteLine();
             Console.WriteLine("Readiness Status: " + readinessStatus);
             Console.WriteLine();
+
+            // Behavior 3
+            Console.WriteLine("Select a guidance option: ");
+            Console.WriteLine("1 - Academic Planning");
+            Console.WriteLine("2 - Personal Planning");
+            Console.WriteLine("3 - Career Planning");
+            Console.Write("Enter choice: ");
+            int choice = int.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine("Guidance: ");
         }   
     }
 }
