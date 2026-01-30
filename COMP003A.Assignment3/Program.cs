@@ -1,4 +1,6 @@
-﻿namespace COMP003A.Assignment3
+﻿using System.ComponentModel.Design;
+
+namespace COMP003A.Assignment3
 {
     internal class Program
     {
@@ -39,6 +41,28 @@
             Console.Write("Have you completed orientation? (yes/no): ");
             string orientationInput = Console.ReadLine();
             bool hasOrientation = (orientationInput.ToLower() == "yes");
-        }
+
+            string readinessStatus = "";
+
+            if (readinessCategory != "Minor" && hasValidId)
+            {
+                if (hasOrientation || readinessCategory == "Adult")
+                {
+                    readinessStatus = "Ready";
+                }
+                else
+                {
+                    readinessStatus = "Conditionally Ready";
+                }
+            }
+            else
+            {
+                readinessStatus = "Not Ready";
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Readiness Status: " + readinessStatus);
+            Console.WriteLine();
+        }   
     }
 }
