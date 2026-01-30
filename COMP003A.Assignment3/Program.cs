@@ -31,6 +31,14 @@
             Console.WriteLine("Readiness Category: " + readinessCategory);
             Console.WriteLine();
 
+            // Behavoir 2
+            Console.Write("Do you have a valid ID? (yes/no): ");
+            string idInput = Console.ReadLine();
+            bool hasValidId = (idInput.ToLower() == "yes");
+
+            Console.Write("Have you completed orientation? (yes/no): ");
+            string orientationInput = Console.ReadLine();
+            bool hasOrientation = (orientationInput.ToLower() == "yes");
         }
     }
 }
